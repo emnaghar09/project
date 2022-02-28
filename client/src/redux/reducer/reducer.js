@@ -6,7 +6,7 @@ const initialState={
     bookedtraining:{},
     addedtraining:{},
     currentUser:{},
-    listtraining:{}
+    listtraining:[],
 } 
 
 const contactReducer = (state=initialState, action) =>{

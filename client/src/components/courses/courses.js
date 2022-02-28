@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Card, Button, Modal} from 'react-bootstrap';
-// import { courseslist } from './list';
+ import { courseslist } from './list';
 import { useDispatch, useSelector } from "react-redux"
 import {getAllTraining} from '../../redux/action/action'
 import Calender from '../profile/calender/calender'
@@ -12,13 +12,14 @@ function Courses() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true)
-
-
   const dispatch=useDispatch()
+  
+
+  useEffect(()=>{
+    dispatch(getAllTraining())
+  },[])
   //what are excatly trainings that are being map??
-  const trainings = useSelector((state) => state.contactReducer.Training)
-  // where to put the following:
-  useEffect(()=>{ dispatch(getAllTraining())},[])
+  const trainings = useSelector((state) => state.ContactReducer.listtraining)
 
   return ( <div>
  <div class="image-offer">
@@ -36,7 +37,7 @@ Our gym and our team invite you to experience a special daily routine with the m
     
     <div  className='course'>
     {/* {courseslist.map((el, key) =>( <div> this is when i used to map the list in list.js */}
- {trainings.map((el, key) =>( <div>
+ {trainings?.map((el, key) =>( <div>
 <Card style={{ border:"success" , width: '18rem', height: '20rem'}}>
   <Card.Img className="cardimg" variant="top" src={el.image} style={{ width: '18rem' , height: '12rem'  }}/>
   <Card.Body>

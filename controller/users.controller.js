@@ -15,10 +15,10 @@ if (find){
 }
 const user = new userSchema(req.body)
 // cette partie concerne l'ajout d'un role
-if(req.body.role){
-   const idRole = await roleSchema.findOne({post: "admin"})
-   user.role = [idRole._id]
-}
+// if(req.body.role){
+//    const idRole = await roleSchema.findOne({post: "admin"})
+//    user.role = [idRole._id]
+// }
 
 // pour affecter a un novel utilisateur un role, on va extraire l'id du role (dans schema du role dans le model) a partir du post qui est choisi
 const salt = 10;
