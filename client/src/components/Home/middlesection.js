@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from '../Capture.PNG'
 import {Link} from 'react-router-dom'
+import {Container} from 'react-bootstrap';
+
 
 function middlesection() {
   return (<div>
@@ -25,7 +27,22 @@ We are a team of passionate people whose goal is to improve everyone's life thro
 <br></br> 🤼 Generally, playing sports, especially for fun, will leave you happier.🤼
 
 </p>
-<img src={logo} width="400" height="250"></img>
+<Container>
+
+<img src='https://st2.depositphotos.com/1310390/5389/v/600/depositphotos_53896945-stock-illustration-healthy-lifestyle-diet-and-fitness.jpg' width='400' height='400'/>
+<div>
+<p className="granola">A healthy outside starts from the inside</p>
+
+</div>
+
+<img src='https://i.fbcd.co/products/original/b512db5e73e8906f61d5624530513d08a2fdfa742910bee645bf3bd80991dc5a.jpg' width='500' height='400'/>
+<br></br>
+</Container>
+<p className='diduknow'>Looking to get to or stay at a healthy weight? 
+
+Both diet and physical activity play a critical role in maintaining a healthy body weight, losing excess body weight, or maintaining successful weight loss.</p>
+
+<br></br>
 </div>
 <br></br>
 <div className="middlepart">

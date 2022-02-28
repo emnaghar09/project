@@ -5,6 +5,8 @@ import image5 from './images/fitness.jpg';
 import image8 from './images/workout-timed.jpg';
 import image9 from './images/exercice.png';
 import image10 from './images/04run-gym-.jpg';
+import {Container} from 'react-bootstrap';
+
 
 function lowersection() {
   return (<div>
@@ -29,6 +31,15 @@ Gosports Gym is a fitness center that offers a variety of classes in a fitness a
 
 
 
+<div className="lowercols">
+  
+<li className="lowerhalfcols">To maintain your weight: Work your way up to 150 minutes a week of moderate-intensity aerobic activity (for example, 30 minutes a day, 5 days a week). Strong scientific evidence shows that physical activity can help you maintain your weight over time. </li>
+
+<li className="lowerhalfcols">To lose weight and keep it off: You will need a high amount of physical activity unless you also adjust your diet and reduce the amount of calories you’re eating and drinking. Getting to and staying at a healthy weight requires both regular physical activity and a healthy eating plan.</li>
+</div>
+
+
+<img src="https://www.plexusmd.com/PlexusMDAPI/Images/Posts/60779/Blog_thumb-108-24.jpg"></img>
 
   </div>)
 }

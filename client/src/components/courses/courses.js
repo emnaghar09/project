@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Card, Button, Modal} from 'react-bootstrap';
 // import { courseslist } from './list';
-import {Link} from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux"
 import {getAllTraining} from '../../redux/action/action'
 import Calender from '../profile/calender/calender'
@@ -19,9 +18,7 @@ function Courses() {
   //what are excatly trainings that are being map??
   const trainings = useSelector((state) => state.contactReducer.Training)
   // where to put the following:
-  useEffect(()=>{ 
-    dispatch(getAllTraining())
-},[])
+  useEffect(()=>{ dispatch(getAllTraining())},[])
 
   return ( <div>
  <div class="image-offer">
@@ -45,7 +42,7 @@ Our gym and our team invite you to experience a special daily routine with the m
   <Card.Body>
     <Card.Title>{el.title}</Card.Title>
     <Card.Text>
-    <h4>Time: {el.duration}</h4>
+    <h4>Time: {el.duration} min</h4>
 <h5>Intencity: {el.intensity}</h5>
   {el.description}
   </Card.Text>

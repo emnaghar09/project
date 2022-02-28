@@ -44,6 +44,8 @@ export const currentUser=(token, history) => async(dispatch)=>{
         })
         localStorage.setItem('current_user', JSON.stringify(user.data));
         history.push('/Profile')
+
+        
     } catch (error) {
         console.log (error)
     }

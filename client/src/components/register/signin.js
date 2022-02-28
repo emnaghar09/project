@@ -24,12 +24,12 @@ return (
     <Form.Label htmlFor="inputPassword5">Email</Form.Label>
     <Form.Control    type="text"   id="email"  onChange={(e)=>setEmail(e.target.value)}/>
     <Form.Label htmlFor="inputPassword5">Password</Form.Label>
-    <Form.Control    type="text"   id="Password" onChange={(e)=>setPassword(e.target.value)} />
+    <Form.Control    type='password'   id="Password" onChange={(e)=>setPassword(e.target.value)} />
     </Form.Group>
 </Form>
-    <Button onClick={submit}>Submit</Button>
+    <Button onClick={submit}>SUBMIT</Button>
     {/* <input className= 'btn btn-primary' defaultValue='Submit' onClick={submit}></input> */}
-<div> not a member? <Link to={'/register'} className='offerlink'>REGISTER</Link> </div>
+<div> Not a member? <Link to={'/register'} className='offerlink'>REGISTER</Link> </div>
     </div>
 </div>
 </div> 

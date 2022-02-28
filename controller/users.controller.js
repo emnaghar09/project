@@ -24,7 +24,7 @@ if(req.body.role){
 const salt = 10;
 const passwordHached = bcrypt.hashSync(password, salt)
 const userID ={id:user._id}
-const token =jwt.sign(userID, process.env.SECRET_OUR_KEY);
+const token =jwt.sign(userID, process.env.SECRET_OR_KEY);
 user.password = passwordHached;
 await user.save();
 res.status(200).send({msg: 'registred successfully', token})
@@ -45,7 +45,7 @@ if (!match){
 res.status(400).send({msg:"bad credentials"})
 }
 const userID ={id:find._id}
-const token =jwt.sign(userID, process.env.SECRET_OUR_KEY);
+const token =jwt.sign(userID, process.env.SECRET_OR_KEY);
 res.status(200).send({msg:"loggin successfully"})
 } catch (error) {
 }

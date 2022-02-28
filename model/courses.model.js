@@ -8,7 +8,7 @@ const courseSchema = new mongoose.Schema(
       // enum: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     },
     duration: { type: Number, min: 0 },
-    intencity: { type: Number, min: 0 },
+    intencity: { type: String, min: 0 },
     image: { type: String, required: true }
     //this part needs to be further unederstood
     // dateAdded: { type: Date, default: Date.now },

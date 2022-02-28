@@ -16,17 +16,18 @@ function NavBar() {
     <Nav className="me-auto">
      
       <Nav.Link as={Link} to="/">Home</Nav.Link>
-    {/* <Nav.Link as={Link} to="/Courses">Courses</Nav.Link> */}
+      <Nav.Link as={Link} to="/Profile">Profile</Nav.Link>
+   
     <Nav.Link as={Link} to="/offers">Offers</Nav.Link>
     <Nav.Link as={Link} to="/Contact">Contact</Nav.Link>
-    <Nav.Link as={Link} to="/Profile">Profile</Nav.Link>
+   
     </Nav>
     <Nav>
     {/* <Nav.Link  as={Link} to='/signin'>SignIn</Nav.Link> */}
 
 
     {currentuser?
-      <Nav.Link as={Link} to="/" onClick={()=>localStorage.clear()}>SignIn</Nav.Link>
+      <Nav.Link as={Link} to="/" onClick={()=>localStorage.clear()}>SignOut</Nav.Link>
     :
     <Nav.Link  as={Link} to='/signin'>SignIn</Nav.Link>}
       

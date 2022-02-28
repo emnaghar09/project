@@ -2,7 +2,7 @@ import React,{ useState } from 'react'
 import {Form, Button} from 'react-bootstrap'
 import {useDispatch} from "react-redux"
 import {signUp} from '../../redux/action/action'
-
+import {Link} from 'react-router-dom'
 function Register() {
   
   const [fullname, setFullname]=useState('')
@@ -39,7 +39,8 @@ function Register() {
 </Form.Select> */}
 <br></br>
 {/* <input className= 'btn btn-primary' defaultValue='Submit' onClick={sendsignUp}></input> */}
-      <Button onClick={sendsignUp}>Submit</Button>
+      <Button onClick={sendsignUp}><Link to={'/signin'} className='offerlink'>SUBMIT</Link></Button>
+      <div> not a member?  </div>
  </div>
  </div>
   )

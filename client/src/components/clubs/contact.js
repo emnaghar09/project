@@ -7,6 +7,8 @@ import image5 from './images/5.jpg'
 import {Carousel} from 'react-bootstrap';
 import {ListGroup, Button}  from 'react-bootstrap';
 import {Link} from 'react-router-dom'
+
+
 function contact() {
     return (<div>
       <div class="image-offer">

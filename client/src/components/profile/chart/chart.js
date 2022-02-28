@@ -9,17 +9,17 @@ const pieData = [
 
 ]
 const pieOptions = {
-  title: 'My Daily Activities',
+  title: 'Your attended courses',
   pieHole: 0.4,
 }
 class PieChart extends Component {
   render() {
     return (
       <div className="container mt-5">
-        <h2>Your attended courses</h2>
         <Chart
-          width={'800px'}
-          height={'450px'}
+      
+          width={'700px'}
+          height={'300px'}
           chartType="PieChart"
           loader={<div>Loading Chart</div>}
           data={pieData}

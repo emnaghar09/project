@@ -47,9 +47,9 @@ function AddCourse() {
 <br></br>
   <Form.Select onChange={(e)=>setDuration(e.target.value)} aria-label="Default select example">
   <option>Duration</option>
-  <option value={"30 min"}>30 min</option>
-  <option value={"45 min"}>45 min</option>
-  <option value={"60 min"}>60 min</option>
+  <option value={30 }>30 min</option>
+  <option value={45 }>45 min</option>
+  <option value={60 }>60 min</option>
 </Form.Select>
    <br></br> 
     </div>
