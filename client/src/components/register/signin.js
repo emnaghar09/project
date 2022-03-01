@@ -27,9 +27,9 @@ return (
     <Form.Control    type='password'   id="Password" onChange={(e)=>setPassword(e.target.value)} />
     </Form.Group>
 </Form>
-    <Button onClick={submit}><Link to={'/Profile'} className='offerlink'>SUBMIT</Link></Button>
+    <Button onClick={submit}><Link to={'/Profile'} className='offerlink' style={{textDecoration: 'none'}}  >SUBMIT</Link></Button>
     {/* <input className= 'btn btn-primary' defaultValue='Submit' onClick={submit}></input> */}
-<div> Not a member? <Link to={'/register'} className='offerlink'>REGISTER</Link> </div>
+<div> Not a member? <Link to={'/register'} style={{textDecoration: 'none', color:"blue"}}  className='offerlink'>REGISTER</Link> </div>
     </div>
 </div>
 </div> 

@@ -26,6 +26,7 @@ export const signIn=(data, history) => async(dispatch)=>{
                 type:SIGNIN,
                 payload:userwhosignin.data
         })
+        console.log (userwhosignin.data)
        dispatch(currentUser( userwhosignin.data.token, history))
     } catch (error) {
         console.log (error)
@@ -35,7 +36,7 @@ export const signIn=(data, history) => async(dispatch)=>{
 
 export const currentUser=(token, history) => async(dispatch)=>{
 
-    const config = { headers:{ahthorization:token}}
+    const config = { headers:{authorization:token}}
     try {
         const user = await axios.get('http://localhost:5000/current', config);
         dispatch({
@@ -63,13 +64,14 @@ export const bookTraining=(data) => async(dispatch)=>{
     }
 }
 
-export const addTraining=(data) => async(dispatch)=>{
+export const addTraining=(data,history) => async(dispatch)=>{
     try {
-        const addedtraining = await axios.post('http://localhost:5000/addcalender',data);
+        const addedtraining = await axios.post('http://localhost:5000/addtrainig',data);
         dispatch({
                 type:ADD_TRAINING,
                 payload:addedtraining.data
         })
+        history.push("/Courses")
     } catch (error) {
         console.log (error)
     }

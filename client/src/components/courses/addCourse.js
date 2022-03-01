@@ -2,17 +2,18 @@ import React, { useState }  from 'react';
 import {Form, Button} from 'react-bootstrap'
 import {useDispatch} from "react-redux"
 import {addTraining} from '../../redux/action/action'
-
+import {useHistory} from "react-router-dom"
 function AddCourse() {
-
+  let history = useHistory()
   const [title,setTitle]=useState('')
   const [description,setDescription]=useState('')
   const [day,setDay]=useState('')
+  const [image,setImage]=useState('')
   const [duration,setDuration]=useState('')
   const [intencity,setIntencity]=useState('')
   const dispatch =useDispatch();
   const submitaddedtraining = () =>{
-    dispatch(addTraining({title, description, day, duration,  intencity}))
+    dispatch(addTraining({title, description, day, duration,  intencity, image},history))
   }
   return (
 <div>
@@ -24,6 +25,9 @@ function AddCourse() {
       <br></br>
       <Form.Label htmlFor="inputPassword5">Description</Form.Label>
       <Form.Control    type="text"   id="Description"  onChange={(e)=>setDescription(e.target.value)}/>
+      <br></br>
+      <Form.Label htmlFor="inputPassword5">Image link</Form.Label>
+      <Form.Control    type="text"   id="add image url"  onChange={(e)=>setImage(e.target.value)}/>
 </div> 
 <br></br>
 <div className='courseAddedChoice'>

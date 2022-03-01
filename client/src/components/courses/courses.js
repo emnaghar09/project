@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Card, Button, Modal} from 'react-bootstrap';
- import { courseslist } from './list';
+
 import { useDispatch, useSelector } from "react-redux"
 import {getAllTraining} from '../../redux/action/action'
 import Calender from '../profile/calender/calender'
@@ -25,33 +25,33 @@ function Courses() {
  <div class="image-offer">
   <div class="text-offer">OUR COURSES</div> </div>
   <div  className="allcourses">  
-  <div className="introcourses">
+  <div c>
 
-<p> Gosports is a series of gyms covering up to 2500m² spaces with their indoor and outdoor layout.
+<p> 
 
 Our gyns are rich in the latest Technogym equipment, enhanced with committed coaches who listen to you and provided with professional classes that are intensely beneficial.
-
-Our gym and our team invite you to experience a special daily routine with the mission of your well-being.</p>
+</p>
 
     </div>
     
     <div  className='course'>
     {/* {courseslist.map((el, key) =>( <div> this is when i used to map the list in list.js */}
  {trainings?.map((el, key) =>( <div>
-<Card style={{ border:"success" , width: '18rem', height: '20rem'}}>
+<Card style={{ border:"success" , width: '18rem', height: '35rem'}}>
   <Card.Img className="cardimg" variant="top" src={el.image} style={{ width: '18rem' , height: '12rem'  }}/>
   <Card.Body>
     <Card.Title>{el.title}</Card.Title>
     <Card.Text>
-    <h4>Time: {el.duration} min</h4>
-<h5>Intencity: {el.intensity}</h5>
+    <h6> ⏱️ Time: {el.duration} min</h6>
+<p> 💪 Intensity: {el.intencity}</p>
   {el.description}
   </Card.Text>
     {/* <Card.Text> <Link to={`/Details/${el.id}`}><Button variant="info">DETAILS</Button></Link></Card.Text> */}
   </Card.Body>
   <div className="btns">
-<Button variant="light" onClick={handleShow}>Book</Button>
+<Button variant="info" onClick={handleShow}>Book</Button>
             </div>
+            <br></br>
             <Modal show={show} onHide={handleClose} className="modal">
         <Modal.Header closeButton>
             <Modal.Title>Book your course</Modal.Title>

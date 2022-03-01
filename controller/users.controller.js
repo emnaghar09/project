@@ -36,6 +36,8 @@ exports.authSignIn =async (req, res) => {
 const {email, password} = req.body;
 try {
 const find = await userSchema.findOne({email:email});
+// to get the name of the role by id
+const roles = await roleSchema.findById(find.role[0])
 if (!find){
 res.status(400).send({msg:"user not exist"})
 }
@@ -44,9 +46,10 @@ console.log(match)
 if (!match){   
 res.status(400).send({msg:"bad credentials"})
 }
-const userID ={id:find._id}
+// add the role inside the tokem using role:roles.post
+const userID ={id:find._id,role:roles.post}
 const token =jwt.sign(userID, process.env.SECRET_OR_KEY);
-res.status(200).send({msg:"loggin successfully"})
+res.status(200).send({msg:"loggin successfully",token})
 } catch (error) {
 }
 }

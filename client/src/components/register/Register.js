@@ -39,7 +39,7 @@ function Register() {
 </Form.Select> */}
 <br></br>
 {/* <input className= 'btn btn-primary' defaultValue='Submit' onClick={sendsignUp}></input> */}
-      <Button onClick={sendsignUp}><Link to={'/signin'} className='offerlink'>SUBMIT</Link></Button>
+      <Button onClick={sendsignUp}><Link style={{textDecoration: 'none'}} to={'/signin'} className='offerlink'>SUBMIT</Link></Button>
       <div> not a member?  </div>
  </div>
  </div>

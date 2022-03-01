@@ -108,50 +108,9 @@ function initial() {
             image:'https://oceaclub.com/slides/rpm.jpg'
           }
         ]
-       const Train =  new training(trainingList);
-       Train.save();
-        //   });
-        //   new training({
-        //     title: "GRIT",
-        //     description: "Improvement of cardiovascular power. Explosiveness and muscle tone. Refining and toning the figure. Improve strength and build muscle mass. Burns up to 700 calories per class.",
-        //     day:"Tuesday, Thursday",
-        //     duration: 35 ,
-        //     intencity:'High', 
-        //     image:'https://www.espace-musculation.com/uploads/2017/12/bienfaits-hiit.jpg'
-        //   }).save(err => {
-        //     if (err) {
-        //       console.log("error", err);
-        //     }
-        //     console.log("added to training collection"); 
-        //   });
-        //   new training({
-        //     title: "AQUAGYM",
-        //     description: "Improves cardiovascular fitness. Refines the figure. Stretches the muscles thanks to the hydro-massage. Burns an average of 550 calories per class.",
-        //     day:"Tuesday, Thursday, Sunday",
-        //     duration: 30 ,
-        //     intencity:'Moderate', 
-        //     image:'https://www.fitness.fr/wp-content/uploads/2020/11/Planet_Aqua_4-scaled.jpg'
-        //   }).save(err => {
-        //     if (err) {
-        //       console.log("error", err);
-        //     }
-        //     console.log("added to training collection"); 
-        //   });
-        //   new training({
-        //     title: "RPM",
-        //     description: "Improved cardiovascular fitness, increased metabolism (calories burned at rest). Tones and sculpts the hips, legs and buttocks. Releases endorphins, brings a natural feeling of euphoria. Burns up to 675 calories per class.",
-        //     day:"Monday, Wednesday, Friday",
-        //     duration: 45 ,
-        //     intencity:'High', 
-        //     image:'https://oceaclub.com/slides/rpm.jpg'
-        //   }).save(err => {
-        //     if (err) {
-        //       console.log("error", err);
-        //     }
-        //     console.log("added to training collection"); 
-        //   });
-        // };
-      // });
+        const options = { ordered: true };
+       training.insertMany(trainingList,options);
+       
     };
   });
   
@@ -159,7 +118,7 @@ function initial() {
 app.use(cors());
 app.use(express.json());
 app.use('/', authRoute)
-// 4- create a server
+// 4- create a server 
 app.listen(port, (err)=>{
     err? console.log(err)   :    console.log(`our server is listening on ${port}`)
 })

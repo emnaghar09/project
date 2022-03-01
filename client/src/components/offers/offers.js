@@ -16,27 +16,27 @@ function Offers({handlerOffer}) {
       handleClose()
   }
 
-
-
 return (
 <div>
 
 {/* first we present the offers */}
 <div class="image-offer">
-  <div class="text-offer">OUR OFFERS</div>
+  <div class="text-offer" >OUR OFFERS</div>
 </div>
 <br></br>
 <div>
 
-<h3> We provide 2 offers : 6months vs 12 months membership</h3>
+<h3 className='introffer'> We provide 2 offers : 6months vs 12 months membership</h3>
 </div>
  {/* offer 6 monthes description */}
   <div className="offer">
   <div className="halfoffer">
 <h3>6 month subscription</h3>
+
 <h4>Unlimited access</h4>
-06:30 - 21:30 H
+⏱️ 06:30 - 21:30 H ⏱️ 
 <h3>600Dt</h3>
+
 <ul>
 <li>cardio training area</li>
 <li>weight training area</li>
@@ -45,15 +45,17 @@ return (
 
 <p>Unlimited access to all Gosports Gym classes and clubs</p>
 
-<Button variant="dark" onClick={handleShow}>Choose this offer</Button>
+<Button variant="dark" onClick={handleShow}>Choose 6 months offer</Button>
 </div>
 
 {/* offer one year description*/}
  <div className="halfoffer">
 <h3>12 month subscription</h3>
+
 <h4>Unlimited access</h4>
-06:30 - 21:30 H
+⏱️ 06:30 - 21:30 H ⏱️ 
 <h3>930Dt</h3>
+
 <ul>
 <li>cardio training area</li>
 <li>weight training area</li>
@@ -62,7 +64,7 @@ return (
 <p>Unlimited access to all Gosports Gym classes and clubs</p>
 
 
-<Button variant="dark" onClick={handleShow}>Choose this offer</Button>
+<Button variant="dark" onClick={handleShow}>Choose 12 months offer</Button>
 
 {/* the modal form that will fill potential member details */}
 <Modal show={show} onHide={handleClose}>

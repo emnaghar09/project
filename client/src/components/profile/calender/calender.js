@@ -13,7 +13,7 @@ function Calender() {
 
   return (
     <div>
-      <Calendar onChange={submit(value)} value={value} />
+      <Calendar onChange={()=>submit(value)} value={value} />
   
     </div>
   );

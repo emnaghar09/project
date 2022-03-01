@@ -3,7 +3,7 @@ const courseSchema =require('../model/courses.model')
 
 // adding new trainig
 exports.addNewTrainig =async (req, res) => {
-    const {title, day, duration, intencity} = req.body;
+    const {title, day, duration, intencity, image} = req.body;
     try {
     const find = await courseSchema.findOne({title:title});
     if (find){

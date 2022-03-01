@@ -12,8 +12,12 @@ import {Link} from 'react-router-dom'
 function contact() {
     return (<div>
       <div class="image-offer">
+      
       <div class="text-offer">Contact</div> </div>
+      
         <div className='contact'>
+        <p className="introcourses">Gosports is a series of gyms covering up to 2500m² spaces with their indoor and outdoor layout.</p>
+        <br></br>
             <ListGroup>
   
   <ListGroup.Item>PHONE:   39 143 900</ListGroup.Item>
@@ -104,7 +108,7 @@ function contact() {
   
       </div>
       <br></br>
-  <Link to="/"><Button variant="dark">Home</Button></Link>
+  <Link to="/"><Button variant="light">Home</Button></Link>
         </div>
         </div>
     )

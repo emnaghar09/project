@@ -148,6 +148,7 @@ color:black;
 
   .course{display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     padding-top: 1rem;
@@ -224,7 +225,7 @@ box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30p
   padding: 3rem;
   
 }
-
+.introffer{ font-family: 'Kalam', cursive;}
 .halfoffer{
   display: flex;
   flex-direction: column;
