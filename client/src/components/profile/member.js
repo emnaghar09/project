@@ -65,11 +65,12 @@ member name
 </div>
   </div>
     </div>
+    <br></br>
     <div>
-
-    <p className="granola">You’re only one workout away from a good mood.</p>
 <Button> 🎯<Link to={"/Courses"} className='offerlink'>book your next training session </Link> 🎯</Button>
-<br></br>
+
+<p className="granola">You’re only one workout away from a good mood.</p>
+
 <br></br>
 
 </div>

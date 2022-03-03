@@ -25,12 +25,3 @@ exports.displayTrainings =  async (req,res)=>{
         res.status(500).send({msg:"could not list"})
     }
 }
-exports.deleteTraining= async(req, res)=> {
-    const {ID} = req.params
-    try {
-    const removedtraining = await courseSchema.findByIdAndDelete(ID)
-    res.status(200).send({msg:'successfully removed training', removedtraining})
-    } catch (error) {
-    res.status(500).send({msg:'cannot be removed', error}) 
-    }
-    }

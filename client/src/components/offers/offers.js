@@ -1,5 +1,7 @@
 import React, {useState}  from 'react';
 import {Modal, Button, Form} from 'react-bootstrap'; 
+import {useDispatch} from "react-redux"
+import {chosenOffer} from '../../redux/action/action'
 
 function Offers({handlerOffer}) {
   // imported for the form group
@@ -7,14 +9,16 @@ function Offers({handlerOffer}) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true)
  // added to make the choose offer btn functionnal
-  const [fullName, setFullName]=useState('')
-    const [email, setEmail]=useState('')
-    const [phone, setPhone] = useState('')
-  
-    const chooseOffer = () => {
-      handlerOffer({fullName,email,phone})
-      handleClose()
-  }
+ const [fullname,setFullname]=useState('')
+ const [email,setEmail]=useState('')
+ const [phone,setPhone]=useState('')
+
+
+ const dispatch =useDispatch();
+ const submitoffer = () =>{
+   dispatch(chosenOffer({fullname, email, phone}));
+  console.log(submitoffer) 
+ }
 
 return (
 <div>
@@ -75,21 +79,21 @@ return (
         <Form>
     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
     <Form.Label>FULLNAME</Form.Label>
-    <Form.Control type="email" placeholder="add the movie name" onInput ={(event)=> setFullName(event.target.value)}  />
+    <Form.Control type="email" placeholder="add the movie name" onInput ={(e)=>setFullname(e.target.value)} />
     </Form.Group>
     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
     <Form.Label>EMAIL</Form.Label>
-    <Form.Control type="email" placeholder="add the movie name"  onInput ={(event)=> setEmail(event.target.value)}  />
+    <Form.Control type="email" placeholder="add the movie name"  onInput={(e)=>setEmail(e.target.value)} />
     </Form.Group>
     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1" >
     <Form.Label>PHONE NUMBER</Form.Label>
-    <Form.Control type="email" placeholder="add the movie description"  onInput ={(event)=> setPhone(event.target.value)}  />
+    <Form.Control type="email" placeholder="add the movie description"  onInput={(e)=>setPhone(e.target.value)} />
     </Form.Group>
      </Form>
     </Modal.Body>
         <Modal.Footer>
             
-            <Button variant="info" onClick={chooseOffer}>
+            <Button variant="info" onClick={submitoffer}>
             Save Changes
             </Button>
         </Modal.Footer>

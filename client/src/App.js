@@ -25,7 +25,7 @@ return (
   <Route path="/Courses" component={Courses} />
   <Route path="/Offers" component={Offers} />
   <Route path="/Contact" component={Contact} />
-  <Route path="/Products" component={Products} />
+  {/* <Route path="/Products" component={Products} /> */}
   <Route path="/Profile" component={Profile} />
   <Route path="/AddCourse" component={AddCourse} />
   <Route path='/register' component={Register}/>

@@ -12,9 +12,9 @@ function Calender() {
 }
 
   return (
-    <div>
+    <div className='modalcalendar'>
       <Calendar onChange={()=>submit(value)} value={value} />
-  
+ 
     </div>
   );
 }

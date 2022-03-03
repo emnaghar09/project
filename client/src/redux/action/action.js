@@ -1,4 +1,4 @@
-import {SIGNUP, SIGNIN, GET_USER, BOOK_TRAINING, ADD_TRAINING, GET_ALL_TRAINING, LOGOUT} from '../action-type/action-type'
+import {SIGNUP, SIGNIN, GET_USER, BOOK_TRAINING, ADD_TRAINING, GET_ALL_TRAINING,  GET_OFFER,  OFFER, DELETE_OFFER} from '../action-type/action-type'
 import axios from 'axios'
 
 
@@ -83,6 +83,43 @@ export const getAllTraining=() => async(dispatch)=>{
         dispatch({
                 type:GET_ALL_TRAINING,
                 payload:res.data.Training,
+        })
+    } catch (error) {
+        console.log (error)
+    }
+}
+
+export const chosenOffer=(data) => async(dispatch)=>{
+    console.log(data)
+    try {
+        const offer = await axios.post('http://localhost:5000/offer',data);
+        dispatch({
+                type:OFFER,
+                payload:offer.data
+        })
+    } catch (error) {
+        console.log (error)
+    }
+}
+export const getOffers=() => async(dispatch)=>{
+    
+    try {
+        const interstePersons = await axios.get('http://localhost:5000/displayPersons');
+        dispatch({
+                type:GET_OFFER,
+                payload:interstePersons.data.Persons,
+        })
+    } catch (error) {
+        console.log (error)
+    }
+}
+export const removeOffers=(ID) => async(dispatch)=>{
+    
+    try {
+        const removedPersons = await axios.delete(`http://localhost:5000/offer/${ID}`);
+        dispatch({
+                type:DELETE_OFFER,
+                payload:removedPersons.data.Persons,
         })
     } catch (error) {
         console.log (error)

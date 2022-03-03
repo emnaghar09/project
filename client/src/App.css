@@ -187,7 +187,7 @@ background: #74ebd5;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #ACB6E5, #74ebd5); }
 
-
+.modalcalendar{display:flex;}
 /* product selling component css */
   .product{     display: flex;
     flex-direction: row;
@@ -464,3 +464,13 @@ color:#071b3f}
   align-content: center;
   justify-content: space-between;
 border-radius: 2em;}
+
+.listOfIntertedPersons{display: flex;
+  width:50%;
+}
+.list-offer-persons{display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+}

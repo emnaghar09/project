@@ -2,7 +2,7 @@ import React from 'react'
 import {Card} from 'react-bootstrap';
 import MultiLineChart from './chart/linechart'
 import AddCourse from '../courses/addCourse'
-import {Link} from 'react-router-dom'
+import ListOfPersons from '../offers/listOfPersons'
 
 function adminProfile() {
   return (
@@ -57,8 +57,14 @@ GOSPORTS ADMIN PROFILE
 </Card>
   </div>
 </div>
-<div> <Link to={'/Courses'} className='offerlink'>See Available training sessions</Link> </div>
-<div>  <Link to={'/AddCourse'} className='offerlink'>Add a new training sessions </Link> </div>
+<div> 
+<ListOfPersons/>
+<br></br>
+ </div>
+
+
+
+
     </div>
   )
 }

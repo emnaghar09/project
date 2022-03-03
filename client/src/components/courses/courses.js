@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {Card, Button, Modal} from 'react-bootstrap';
-
-import { useDispatch, useSelector } from "react-redux"
-import {getAllTraining} from '../../redux/action/action'
-import Calender from '../profile/calender/calender'
+import { useDispatch, useSelector } from "react-redux";
+import {getAllTraining} from '../../redux/action/action';
+import Calender from '../profile/calender/calender';
 
 
 
@@ -56,14 +55,11 @@ Our gyns are rich in the latest Technogym equipment, enhanced with committed coa
         <Modal.Header closeButton>
             <Modal.Title>Book your course</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body ClassName="modalcalendar">
  <Calender />
     </Modal.Body>
         <Modal.Footer>
-           
-            <Button variant="info" >
-            Save Changes
-            </Button>
+          
         </Modal.Footer>
         </Modal>
      

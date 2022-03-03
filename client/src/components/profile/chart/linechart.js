@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Chart from 'react-google-charts'
+
 const LineData = [
   ['x', '2022', '2021'],
   [0, 0, 0],
@@ -26,17 +27,17 @@ class MultiLineChart extends Component {
   render() {
     return (
       <div >
-
+<h4>Profits Chart</h4>
         <Chart
           width={'500px'}
-          height={'410px'}
+          height={'380px'}
           chartType="LineChart"
           loader={<div>Loading Chart</div>}
           data={LineData}
           options={LineChartOptions}
           rootProps={{ 'data-testid': '2' }}
         />
-                <h4>Profits Chart</h4>
+              <img src="https://miro.medium.com/max/1400/1*1-Q0tK0FkjlI_jMV_ywh6Q.jpeg" width="250" height="250"/>  
       </div>
     )
   }

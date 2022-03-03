@@ -3,7 +3,7 @@ const calenderSchema=require('../model/calender.model')
 // adding new calender for coach
 
 exports.addNewCalender =async (req, res) => {
-    const {title, day, duration, capacity} = req.body;
+    const {users, day, trainingSession} = req.body;
     try {
     const find = await calenderSchema.findOne({userID:userID});
     if (find){

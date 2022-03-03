@@ -1,4 +1,4 @@
-import {SIGNUP, SIGNIN, GET_USER, BOOK_TRAINING, ADD_TRAINING, GET_ALL_TRAINING} from '../action-type/action-type'
+import {SIGNUP, SIGNIN, GET_USER, BOOK_TRAINING, ADD_TRAINING, GET_ALL_TRAINING,OFFER, GET_OFFER, DELETE_OFFER} from '../action-type/action-type'
 
 const initialState={
     user:{},
@@ -7,6 +7,9 @@ const initialState={
     addedtraining:{},
     currentUser:{},
     listtraining:[],
+    offer:{},
+    getoffer:[],
+    deletedOffer:{},
 } 
 
 const contactReducer = (state=initialState, action) =>{
@@ -34,6 +37,18 @@ switch (action.type) {
     case GET_USER: return{
         ...state, 
         currentUser:action.payload
+    }
+    case GET_OFFER: return{
+        ...state, 
+        getoffer:action.payload
+    }
+    case OFFER: return{
+        ...state, 
+        offer:action.payload
+    }
+    case DELETE_OFFER: return{
+        ...state, 
+        deletedOffer:action.payload
     }
     default:
 return state
