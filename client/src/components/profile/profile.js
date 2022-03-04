@@ -11,8 +11,8 @@ function Profile() {
     <div>
     {/* {currentUser.role = 'admin'? <Admin/> : currentUser.role = 'member'?  <Member/> : <Coach/> } */}
     {/* <Member/> */}
-    <Admin/>
-    {/* <Coach/> */}
+    {/* <Admin/> */}
+    <Coach/>
     </div>
   )
 }

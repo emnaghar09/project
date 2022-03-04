@@ -17,7 +17,7 @@ function AddCourse() {
   }
   return (
 <div>
-<div >
+<div className='bmi' >
 <div className='courseaddedtitle'>
 <h3> Add new training </h3>
 <Form.Label htmlFor="inputPassword5">Training course title</Form.Label>

@@ -27,7 +27,8 @@ class MultiLineChart extends Component {
   render() {
     return (
       <div >
-<h4>Profits Chart</h4>
+      <img src="https://miro.medium.com/max/1400/1*1-Q0tK0FkjlI_jMV_ywh6Q.jpeg" width="250" height="250"/>  
+
         <Chart
           width={'500px'}
           height={'380px'}
@@ -37,7 +38,7 @@ class MultiLineChart extends Component {
           options={LineChartOptions}
           rootProps={{ 'data-testid': '2' }}
         />
-              <img src="https://miro.medium.com/max/1400/1*1-Q0tK0FkjlI_jMV_ywh6Q.jpeg" width="250" height="250"/>  
+         <h4>Profits Chart</h4>     
       </div>
     )
   }

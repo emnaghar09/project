@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Card, Button, Modal} from 'react-bootstrap';
 import { useDispatch, useSelector } from "react-redux";
-import {getAllTraining} from '../../redux/action/action';
+import {getAllTraining, incrementHandler} from '../../redux/action/action';
 import Calender from '../profile/calender/calender';
 
 
@@ -12,8 +12,8 @@ function Courses() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true)
   const dispatch=useDispatch()
-  
-
+  const PLUS=()=>{dispatch(incrementHandler())};
+  const number =useSelector((state)=>state.counter)
   useEffect(()=>{
     dispatch(getAllTraining())
   },[])
@@ -56,13 +56,14 @@ Our gyns are rich in the latest Technogym equipment, enhanced with committed coa
             <Modal.Title>Book your course</Modal.Title>
         </Modal.Header>
         <Modal.Body ClassName="modalcalendar">
- <Calender />
+<Calender />
+
+<Button onClick={()=> PLUS()} variant="info"> Submit</Button>
     </Modal.Body>
         <Modal.Footer>
-          
         </Modal.Footer>
         </Modal>
-     
+        <p>Total booked places:{number}</p> 
   </Card>
   </div>))}
 </div>

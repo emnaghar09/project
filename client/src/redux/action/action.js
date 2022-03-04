@@ -1,7 +1,14 @@
-import {SIGNUP, SIGNIN, GET_USER, BOOK_TRAINING, ADD_TRAINING, GET_ALL_TRAINING,  GET_OFFER,  OFFER, DELETE_OFFER} from '../action-type/action-type'
+import {SIGNUP, SIGNIN, GET_USER, BOOK_TRAINING, ADD_TRAINING, GET_ALL_TRAINING,  GET_OFFER,  OFFER, DELETE_OFFER, INCREMENT} from '../action-type/action-type'
 import axios from 'axios'
 
 
+// frontend only action
+export const incrementHandler =()=>{
+return {
+type:INCREMENT,
+}}
+
+// backend actions with axios
 //user, history
 export const signUp=(data) => async(dispatch)=>{
     console.log(data)
@@ -12,7 +19,6 @@ export const signUp=(data) => async(dispatch)=>{
                 type:SIGNUP, 
                 payload:userwhosignup.data
             })
-           
         } catch (error) {
             console.log (error)
         }
@@ -125,3 +131,4 @@ export const removeOffers=(ID) => async(dispatch)=>{
         console.log (error)
     }
 }
+

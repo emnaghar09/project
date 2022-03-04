@@ -28,14 +28,14 @@ COACH PROFILE
 <br></br>
 <table id="customers">
   <tr>
-  <th>WEEKS/DAYS</th>
-    <th>MONDAY</th>
-    <th>TUESDAY</th>
-    <th>WEDNESDAY</th>
-    <th>THURSDAY</th>
-    <th>FRIDAY</th>
-    <th>SATURDAY</th>
-    <th>SUNDAY</th>
+  <th className="tableHead">WEEKS/DAYS</th>
+    <th className="tableHead">MONDAY</th>
+    <th className="tableHead">TUESDAY</th>
+    <th className="tableHead">WEDNESDAY</th>
+    <th className="tableHead">THURSDAY</th>
+    <th className="tableHead">FRIDAY</th>
+    <th className="tableHead">SATURDAY</th>
+    <th className="tableHead">SUNDAY</th>
   </tr>
   <tr>
     <td>09H-10H</td>
