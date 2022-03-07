@@ -6,9 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-calendar/dist/Calendar.css';
 import 'font-awesome/css/font-awesome.min.css';
-
-// import counterReducer from "./components/products/redux products/reducer";
-// import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import Store from './redux/store'
 

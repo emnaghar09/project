@@ -18,6 +18,8 @@ function Offers({handlerOffer}) {
  const submitoffer = () =>{
    dispatch(chosenOffer({fullname, email, phone}));
   console.log(submitoffer) 
+  handleClose()
+  alert('submitted successfully!');
  }
 
 return (

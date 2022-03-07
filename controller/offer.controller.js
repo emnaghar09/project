@@ -5,10 +5,6 @@ const offerSchema =require('../model/offer.model')
 exports.offer =async (req, res) => {
     const {email, phone,fullname} = req.body;
     try {
-//         const find = await offerSchema.findOne({email:email});
-// if (find){
-//     res.status(400).send({msg:'user already exists'})
-// }
     const personChooseOffer = new offerSchema(req.body)
     await personChooseOffer.save();
     res.status(200).send({msg: ' person who choose an offer added successfully'})

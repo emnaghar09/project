@@ -11,10 +11,11 @@ type:INCREMENT,
 // backend actions with axios
 //user, history
 export const signUp=(data) => async(dispatch)=>{
-    console.log(data)
+    
     try {
-        const userwhosignup = await axios.post('http://localhost:5000/signup',data);
-        console.log(userwhosignup)
+        const userwhosignup = 
+        await axios.post('http://localhost:5000/signup',data);
+       
         dispatch({
                 type:SIGNUP, 
                 payload:userwhosignup.data
@@ -27,12 +28,13 @@ export const signUp=(data) => async(dispatch)=>{
 export const signIn=(data, history) => async(dispatch)=>{
   
     try {
-        const userwhosignin = await axios.post('http://localhost:5000/signin', data);
+        const userwhosignin = 
+        await axios.post('http://localhost:5000/signin', data);
         dispatch({
                 type:SIGNIN,
                 payload:userwhosignin.data
         })
-        console.log (userwhosignin.data)
+       
        dispatch(currentUser( userwhosignin.data.token, history))
     } catch (error) {
         console.log (error)
@@ -49,8 +51,12 @@ export const currentUser=(token, history) => async(dispatch)=>{
                 type:GET_USER, 
                 payload:user.data
         })
+        
         localStorage.setItem('current_user', JSON.stringify(user.data));
-        history.push('/Profile')
+       
+        setTimeout(() => {
+            history.push('/Profile')
+        }, 500);
 
         
     } catch (error) {

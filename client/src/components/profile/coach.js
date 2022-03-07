@@ -11,7 +11,7 @@ function coachProfile() {
   {/* <img src='https://images-platform.99static.com/zZvvxqJQYxYHrINDphE_C3vIn8g=/0x0:1200x1200/500x500/top/smart/99designs-contests-attachments/88/88415/attachment_88415434' className='adminlogo' />
   */}
   <h3>
-COACH PROFILE
+  Welcome to your profile
 </h3>
 </div>
 <br></br>

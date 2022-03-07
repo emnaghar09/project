@@ -14,11 +14,16 @@ const initialState={
 
 const contactReducer = (state=initialState, action) =>{
 switch (action.type) {
-    case SIGNUP: return{
+    case SIGNUP: 
+    localStorage.setItem('token',action.payload.token )
+    return{
+
         ...state, 
         usersignup:action.payload
     }
-    case SIGNIN: return{
+    case SIGNIN: 
+    localStorage.setItem('token',action.payload.token)
+    return{
         ...state, 
         user:action.payload
     }

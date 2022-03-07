@@ -13,6 +13,7 @@ function Register() {
   const dispatch =useDispatch();
   const sendsignUp = () =>{
     dispatch(signUp({fullname, email, age, password, role}))
+    alert('Registred successfully!');
   }
   return (
     <div className="allcourses">
@@ -27,9 +28,14 @@ function Register() {
       <Form.Control    type='password'   id="Password" onChange={(e)=>setPassword(e.target.value)} />
       <Form.Label htmlFor="inputPassword5"><h5>Age</h5></Form.Label>
       <Form.Control    type="number"   id="age" onChange={(e)=>setAge(e.target.value)} />
-      <Form.Label htmlFor="inputPassword5"><h5>Role</h5></Form.Label>
-      <Form.Control    type="text"   id="role" onChange={(e)=>setRole(e.target.value)} />
-    
+      <br></br>
+      {/* <Form.Label htmlFor="inputPassword5"><h5>Role</h5></Form.Label>
+      <Form.Control    type="text"   id="role" onChange={(e)=>setRole(e.target.value)} /> */}
+      <Form.Select onChange={(e)=>setRole(e.target.value)} aria-label="Default select example">
+  <option>ROLE</option>
+  <option value='member'>member</option>
+  <option value='coach'>coach</option>
+</Form.Select>
   <br></br>
   {/* <Form.Select aria-label="Default select example">
   <option>member/coach position</option>

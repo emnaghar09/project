@@ -4,6 +4,7 @@ const roleSchema = require('../model/role.model')
 exports.isAuth  = async(req, res, next)=>{
 const token =req.header('authorization')
 // .split(' ')[1]
+
 try {
 if(!token){
 return res.status(400).send({msg:"not authorized"})
@@ -14,9 +15,8 @@ return res.status(400).send({msg:"not authorized"})
 }
 const user = await userSchema.findById(decoded.id)
 
-const roles = await roleSchema.findById(user.role[0])
-user.role[1] = roles.post
-console.log(user)
+role = await roleSchema.findById(user.role[0])
+user.role = [role]
 req.user=user;
 next();
 } catch (error) {

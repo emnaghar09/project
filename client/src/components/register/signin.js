@@ -12,6 +12,9 @@ const [email, setEmail]=useState('')
 const history =useHistory()
 const submit = ()=>{
 dispatch(signIn({email, password}, history))
+setTimeout(() => {
+window.location.reload();
+}, 10000);
 }
 
 return (

@@ -11,7 +11,7 @@ function memberProfile() {
     <div> 
     <div className="middlepart">
   <h1>
-member name
+Welcome to your profile
 </h1>
 </div>
 

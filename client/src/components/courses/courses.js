@@ -13,7 +13,7 @@ function Courses() {
     const handleShow = () => setShow(true)
   const dispatch=useDispatch()
   const PLUS=()=>{dispatch(incrementHandler())};
-  const number =useSelector((state)=>state.counter)
+  const number =useSelector((state)=>state.CounterReducer.counter)
   useEffect(()=>{
     dispatch(getAllTraining())
   },[])
@@ -48,6 +48,9 @@ Our gyns are rich in the latest Technogym equipment, enhanced with committed coa
     {/* <Card.Text> <Link to={`/Details/${el.id}`}><Button variant="info">DETAILS</Button></Link></Card.Text> */}
   </Card.Body>
   <div className="btns">
+  <span>Total booked places:{number}</span> 
+
+<br></br>
 <Button variant="info" onClick={handleShow}>Book</Button>
             </div>
             <br></br>
@@ -56,14 +59,17 @@ Our gyns are rich in the latest Technogym equipment, enhanced with committed coa
             <Modal.Title>Book your course</Modal.Title>
         </Modal.Header>
         <Modal.Body ClassName="modalcalendar">
+       
 <Calender />
 
 <Button onClick={()=> PLUS()} variant="info"> Submit</Button>
+
+
     </Modal.Body>
         <Modal.Footer>
         </Modal.Footer>
         </Modal>
-        <p>Total booked places:{number}</p> 
+       
   </Card>
   </div>))}
 </div>

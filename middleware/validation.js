@@ -15,7 +15,7 @@ exports.validationSignIn = [
 ]
 
 exports.isValid= async (req, res,next) => {
-console.log(req.body)
+
 try {
 const errors = validationResult(req);
 if (!errors.isEmpty()) {

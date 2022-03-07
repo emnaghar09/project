@@ -6,13 +6,38 @@ import Coach from './coach'
 
 
 function Profile() {
-  // const currentUser=useSelector(State => state.contactReducer.currentUser)
+ let current_user = JSON.parse(localStorage.getItem('current_user'))
+ 
   return (
     <div>
-    {/* {currentUser.role = 'admin'? <Admin/> : currentUser.role = 'member'?  <Member/> : <Coach/> } */}
-    {/* <Member/> */}
-    {/* <Admin/> */}
-    <Coach/>
+   { 
+    current_user?.role[0].post == 'admin' ? 
+    <Admin />:
+
+     current_user?.role[0].post == 'member' ? 
+    
+    <Member/>
+   
+    :
+    <Coach/> 
+    }
+    
+    {/*current_user?.role[0].post = 'admin'? 
+
+    <Admin/> 
+
+    : 
+
+    current_user?.role[0].post = 'member' 
+
+    ?  
+
+    <Member/> 
+
+    : 
+
+    <Coach/> */}
+    
     </div>
   )
 }

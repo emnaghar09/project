@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import logo from './Capture.PNG'
 
 function NavBar() {
+
   const currentuser =JSON.parse(localStorage.getItem('current_user'))
   console.log(currentuser)
   
@@ -14,23 +15,22 @@ function NavBar() {
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-     
       <Nav.Link as={Link} to="/">Home</Nav.Link>
-      <Nav.Link as={Link} to="/Profile">Profile</Nav.Link>
-   
+      {currentuser? 
+
+        <Nav.Link as={Link} to="/Profile">Profile</Nav.Link>
+      :
+      ""
+      }
     <Nav.Link as={Link} to="/offers">Offers</Nav.Link>
     <Nav.Link as={Link} to="/Contact">Contact</Nav.Link>
-   
     </Nav>
     <Nav>
-    {/* <Nav.Link  as={Link} to='/signin'>SignIn</Nav.Link> */}
-
-
     {currentuser?
       <Nav.Link as={Link} to="/" onClick={()=>localStorage.clear()}>SignOut</Nav.Link>
+      //  window.location.reload();
     :
     <Nav.Link  as={Link} to='/signin'>SignIn</Nav.Link>}
-      
     </Nav>
   </Navbar.Collapse>
   </Container>

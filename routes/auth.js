@@ -3,7 +3,7 @@ const auth = express.Router();
 
 
 const {authSignIn , authSignUp,}= require('../controller/users.controller') 
-const { addNewTrainig, displayTrainings, deleteTraining}= require('../controller/training.controller') 
+const {addNewTrainig, displayTrainings, deleteTraining}= require('../controller/training.controller') 
 const {addNewCalender}= require('../controller/calender.controller') 
 const {isValid, validationSignIn, validationSignUp} = require('../middleware/validation')
 const {isAuth} = require('../middleware/isAuth')
