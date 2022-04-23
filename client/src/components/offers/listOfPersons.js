@@ -11,7 +11,8 @@ const deletePersone = (ID) =>{
   dispatch(removeOffers(ID))
   window.location.reload();
 }
-return (<div className="list-offer-persons">
+return (
+<div className="list-offer-persons">
 <h4 className='granola'>Interested persons to be contacted</h4>
     {offers?.map((el, key) =>(
 
@@ -21,7 +22,7 @@ return (<div className="list-offer-persons">
     className="d-flex justify-content-between align-items-start"
   >
     <div className="ms-2 me-auto">
-      <div className="fw-bold"> {el.fullname}</div>
+      <div className="fw-bold"> Name : {el.fullname}</div>
      Email= {el.email}
     </div>
     <Badge bg="primary" pill>
@@ -39,8 +40,3 @@ return (<div className="list-offer-persons">
 }
 </div>)}
 export default ListOfPersons;
- {/* <ListGroup className="listOfIntertedPersons">
-    <ListGroup.Item variant="success">{el.fullname}</ListGroup.Item>
-  <ListGroup.Item>{el.email}</ListGroup.Item>
-  <ListGroup.Item>{el.phone}</ListGroup.Item>
-</ListGroup> */}

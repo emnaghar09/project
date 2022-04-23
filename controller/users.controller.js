@@ -42,7 +42,7 @@ console.log(match)
 if (!match){   
 res.status(400).send({msg:"bad credentials"})
 }
-// add the role inside the tokem using role:roles.post
+// add the role inside the token using role:roles.post
 const userID ={id:find._id,role:roles.post}
 const token =jwt.sign(userID, process.env.SECRET_OR_KEY);
 res.status(200).send({msg:"loggin successfully",token})

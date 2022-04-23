@@ -479,6 +479,7 @@ margin:0.5rem}
 border-radius: 2em;}
 
 .listOfIntertedPersons{display: flex;
+ 
   width:50%;
 }
 .list-offer-persons{display: flex;
@@ -544,12 +545,16 @@ border-radius: 2em;}
   margin: 2rem;
 }
 .lowerhalfcols {width: 90%;
-  margin: auto;}}
+  margin: auto;}
+.offer{display: flex;
+flex-direction: column}
+
+}
 
 
   
 /* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media screen and (min-width: 600px)  {
+ /* @media screen and (min-width: 600px)  {
   .App{ width: 90%;
     margin: auto;
     align-content: center;
@@ -600,16 +605,16 @@ border-radius: 2em;}
   justify-content: space-between;
   align-content: space-around;
   margin: 2rem;
-}}
-/* .lowerhalfcols{width: 90%;
-  margin: auto;}}
+}
+.lowerhalfcols{width: 90%;
+  margin: auto;}} */
 
 /* Medium devices (landscape tablets, 768px and up) */
-/* @media  screen and (max-width: 768px)  {
+ /* @media  screen and (max-width: 768px)  {
   .App{ width: 90%;
-    margin: auto;
-/* }} */ 
-/* @media screen and (min-width: 780px) and (max-width: 979px){
+    margin: auto;}}
+
+@media screen and (min-width: 780px) and (max-width: 979px) {
 
 
   .App{ width: 90%;
@@ -664,5 +669,3 @@ justify-content: space-between;
 align-content: space-around;
 margin: 2rem;
 }} */
-
- 

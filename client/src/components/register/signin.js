@@ -31,8 +31,9 @@ return (
     </Form.Group>
 </Form>
     <Button onClick={submit}><Link to={'/Profile'} className='offerlink' style={{textDecoration: 'none'}}  >SUBMIT</Link></Button>
+    <br></br>
     {/* <input className= 'btn btn-primary' defaultValue='Submit' onClick={submit}></input> */}
-<div> Not a member? <Link to={'/register'} style={{textDecoration: 'none', color:"blue"}}  className='offerlink'>REGISTER</Link> </div>
+<div> <h6>Not a member?</h6> <Link to={'/register'} style={{textDecoration: 'none', color:"blue"}}  className='offerlink'>REGISTER</Link> </div>
     </div>
 </div>
 </div> 

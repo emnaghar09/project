@@ -26,13 +26,13 @@ function Courses() {
   <div  className="allcourses">  
   <div c>
 
-<p> 
+<h4 className='introffer'> 
 
 Our gyns are rich in the latest Technogym equipment, enhanced with committed coaches who listen to you and provided with professional classes that are intensely beneficial.
-</p>
+</h4>
 
     </div>
-    
+    <h3>Total booked places:{number}</h3> 
     <div  className='course'>
     {/* {courseslist.map((el, key) =>( <div> this is when i used to map the list in list.js */}
  {trainings?.map((el, key) =>( <div>
@@ -48,7 +48,7 @@ Our gyns are rich in the latest Technogym equipment, enhanced with committed coa
     {/* <Card.Text> <Link to={`/Details/${el.id}`}><Button variant="info">DETAILS</Button></Link></Card.Text> */}
   </Card.Body>
   <div className="btns">
-  <span>Total booked places:{number}</span> 
+ 
 
 <br></br>
 <Button variant="info" onClick={handleShow}>Book</Button>

@@ -2,7 +2,7 @@ import React, { useState }  from 'react';
 import {Form, Button} from 'react-bootstrap'
 import {useDispatch} from "react-redux"
 import {addTraining} from '../../redux/action/action'
-import {useHistory} from "react-router-dom"
+import {useHistory, Link} from "react-router-dom"
 function AddCourse() {
   let history = useHistory()
   const [title,setTitle]=useState('')
@@ -31,16 +31,7 @@ function AddCourse() {
 </div> 
 <br></br>
 <div className='courseAddedChoice'>
-    <Form.Select onChange={(e)=>setDay(e.target.value)} aria-label="Default select example">
-    <option>DAY</option>
-    <option value={'Monday'}>Monday</option>
-    <option value={'Tuesday'}>Tuesday</option>
-    <option value={'Wednesday'}>Wednesday</option>
-    <option value={'Thursday'}>Thursday</option>
-    <option value={'Friday'}>Friday</option>
-    <option value={'Saturday'}>Saturday</option>
-    <option value={'Sunday'}>Sunday</option>
-  </Form.Select>
+
   <br></br>
   <Form.Select onChange={(e)=>setIntencity(e.target.value)} aria-label="Default select example">
   <option>Intensity</option>
@@ -57,7 +48,7 @@ function AddCourse() {
 </Form.Select>
    <br></br> 
     </div>
-    <Button onClick={submitaddedtraining}>Submit</Button>
+    <Button onClick={submitaddedtraining}><Link to={"/Courses"} style={{textDecoration: 'none'}} className='offerlink'>Submit</Link></Button>
     </div>
     </div>
   )
